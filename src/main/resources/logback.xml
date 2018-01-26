@@ -172,13 +172,13 @@
 
 		<appender-ref ref="STDOUT" />
 				<appender-ref ref="HTTP" />
-		
-
-		-->
-
 		<appender-ref ref="ALL_FILE_ASYNC" />
 		<appender-ref ref="WARN_FILE_ASYNC" />
 		<appender-ref ref="ERR_FILE_ASYNC" />
+
+		-->
+
+		
 		
 		<appender-ref ref="STDOUT" />
 		

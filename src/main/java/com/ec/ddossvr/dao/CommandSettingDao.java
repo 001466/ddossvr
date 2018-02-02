@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-import com.ec.common.utils.PropertiesUtils;
+import com.ec.common.util.PropertiesUtil;
 import com.ec.ddossvr.model.CommandSetting;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -24,7 +24,7 @@ public class CommandSettingDao {
 
 	public static final String EXT_SETTING 		= "command-setting";
 
-	private static  PropertiesUtils properties = null;
+	private static  PropertiesUtil properties = null;
 	
 	private static  CommandSetting setting = new CommandSetting();
 
@@ -36,7 +36,7 @@ public class CommandSettingDao {
 
 	@PostConstruct
 	private void postConstruct() throws IOException {
-		properties = new PropertiesUtils("config/command-setting.properties");
+		properties = new PropertiesUtil("config/command-setting.properties");
 		if (StringUtils.isEmpty(properties.get(EXT_SETTING))) {
 			try {
 				upd(setting);

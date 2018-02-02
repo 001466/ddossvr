@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
 
 import com.ec.common.ApplicationContext;
 import com.ec.common.service.QueueExec;
-import com.ec.common.utils.StringUtil;
+import com.ec.common.util.StringUtil;
 import com.ec.ddossvr.DdossvrApplication;
 import com.ec.ddossvr.dao.CommandSettingDao;
 import com.ec.ddossvr.model.Command;

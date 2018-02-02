@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ec.common.model.BaseEntity;
-import com.ec.common.utils.ObjectUtils;
+import com.ec.common.util.ObjectUtil;
 import com.ec.ddossvr.dao.CommandSettingDao;
 import com.ec.ddossvr.model.Command;
 import com.ec.ddossvr.service.CommandService;
@@ -33,8 +33,8 @@ public class CommandServiceSYN extends CommandService{
 		
 		try {
 			
-			ObjectUtils.copyProperties(get, commandSettingDao.get());
-			ObjectUtils.copyProperties(syn, commandSettingDao.get());
+			ObjectUtil.copyProperties(get, commandSettingDao.get());
+			ObjectUtil.copyProperties(syn, commandSettingDao.get());
 			get.setAttackInfo(syn);
 			
 			System.out.println("Reader:" + getStr);
